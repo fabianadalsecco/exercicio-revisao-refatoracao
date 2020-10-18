@@ -11,11 +11,11 @@ Vendedor::Vendedor(std::string _nome, double _salario, int _vendas, double _hora
 	setHoras(_horas);
 }
 
-double Empregado::setVendas(double _vendas){
+double Vendedor::setVendas(double _vendas){
     this->quotaMensalVendas = _vendas;
 }
 
-double Empregado::getVendas(){
+double Vendedor::getVendas(){
     return this->quotaMensalVendas;
 }
 
