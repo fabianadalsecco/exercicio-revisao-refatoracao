@@ -27,5 +27,4 @@ void Vendedor::print(){
 	std::cout << "Nome: " << this->getNome() << std::endl;
   	std::cout << "Salario Mes: " << this->pagamentoMes() << std::endl;  
   	std::cout << "Quota vendas: " << this->quotaVendasAnual() << std::endl;  
-	std::cout << std::endl;
 }

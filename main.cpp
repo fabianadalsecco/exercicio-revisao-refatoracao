@@ -19,6 +19,9 @@ int main() {
   
   for (int i = 0; i < 3; i++){
     vendedores[i].print();
+    if(i != 2){
+      std::cout << std::endl;
+    }
   }
 
   return 0;	
