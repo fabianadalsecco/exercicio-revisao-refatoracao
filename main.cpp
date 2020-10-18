@@ -1,64 +1,25 @@
-#include "Engenheiro.cpp"
-#include "Vendedor.cpp"
+#include "Engenheiro.hpp"
+#include "Vendedor.hpp"
 
 int main() {
 
-  Engenheiro eng1;
-  eng1.setNome("Joao Snow");
-  eng1.setSalario(35);
-  eng1.setProjetos(3); 
-  std::cout << "Nome: " << eng1.getNome() << std::endl;
-  std::cout << "Salario Mes: " << eng1.pagamentoMes(9.5) << std::endl;
-  std::cout << "Projetos: " << eng1.getProjetos() << std::endl;
-  std::cout << std::endl;
+  Engenheiro engenheiros[3];
+  Engenheiro engenheiros[0] = Engenheiro("Joao Snow", 35, 3, 9.5);
+  Engenheiro engenheiros[1] = Engenheiro("Daniela Targaryen", 30, 1, 8);
+  Engenheiro engenheiros[2] = Engenheiro("Bruno Stark", 30, 2, 8);
+
+  for (int i = 0; i < 3; i++){
+    engenheiros[i].print();
+  }
+
+  Vendedor vendedores[3];
+  Vendedor vendedores[0] = Vendedor("Tonho Lannister", 20, 5000, 6);
+  Vendedor vendedores[1] = Vendedor("Jose Mormont", 25, 3000, 8);
+  Vendedor vendedores[2] = Vendedor("Sonia Stark", 30, 4000, 8);
   
-  Engenheiro eng2;
-  eng2.setNome("Daniela Targaryen");
-  eng2.setSalario(30);
-  eng2.setProjetos(1); 
-  std::cout << "Nome: " << eng2.getNome() << std::endl;
-  std::cout << "Salario Mes: " << eng2.pagamentoMes(8) << std::endl;
-  std::cout << "Projetos: " << eng2.getProjetos() << std::endl;  
-  std::cout << std::endl;
-  
-  Engenheiro eng3;
-  eng3.setNome("Bruno Stark");
-  eng3.setSalario(30);
-  eng3.setProjetos(2); 
-  std::cout << "Nome: " << eng3.getNome() << std::endl;
-  std::cout << "Salario Mes: " << eng3.pagamentoMes(8) << std::endl;
-  std::cout << "Projetos: " << eng3.getProjetos() << std::endl;  
-  std::cout << std::endl;
-  
-  
-  Vendedor vend1;
-  vend1.setNome("Tonho Lannister");
-  vend1.setSalario(20);
-  vend1.setVendas(5000);
-  
-  std::cout << "Nome: " << vend1.getNome() << std::endl;
-  std::cout << "Salario Mes: " << vend1.pagamentoMes(6) << std::endl;  
-  std::cout << "Quota vendas: " << vend1.quotaTotalAnual() << std::endl;
-  std::cout << std::endl;
-  
-  Vendedor vend2;
-  vend2.setNome("Jose Mormont");
-  vend2.setSalario(25);
-  vend2.setVendas(3000);
-  
-  std::cout << "Nome: " << vend2.getNome() << std::endl;
-  std::cout << "Salario Mes: " << vend2.pagamentoMes(8) << std::endl;  
-  std::cout << "Quota vendas: " << vend2.quotaTotalAnual() << std::endl; 
-  std::cout << std::endl;  
-	
-  Vendedor vend3;
-  vend3.setNome("Sonia Stark");
-  vend3.setSalario(30);
-  vend3.setVendas(4000);
-  
-  std::cout << "Nome: " << vend3.getNome() << std::endl;
-  std::cout << "Salario Mes: " << vend3.pagamentoMes(8) << std::endl;  
-  std::cout << "Quota vendas: " << vend3.quotaTotalAnual() << std::endl;  
-  
+  for (int i = 0; i < 3; i++){
+    vendedores[i].print();
+  }
+
   return 0;	
 }

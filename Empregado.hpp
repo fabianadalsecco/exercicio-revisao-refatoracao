@@ -6,18 +6,21 @@
 
 class Empregado {
 
-  protected:
+  private:
     std::string nome;
     double salarioHora = 0;
     double quotaMensalVendas = 0;
+    double horasTrabalhadas = 0;
 
   public:
     std::string setNome(std::string _nome);
     std::string getNome();
-    double pagamentoMes(double horasTrabalhadas);
-    double setSalario(double valor);
+    double setHoras(double _horasTrabalhadas);
+    double getHoras();
+    double pagamentoMes();
+    double setSalario(double _valor);
     double getSalario();
-    double setVendas(double vendas);
+    double setVendas(double _vendas);
     double getVendas();
 };
 

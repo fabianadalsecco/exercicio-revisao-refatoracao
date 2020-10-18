@@ -9,10 +9,12 @@ class Engenheiro : public Empregado {
     std::string nome;  
 	int projetos;
 	
-  public:        
+  public:
+    Engenheiro ();
+    Engenheiro (std::string _nome, double _salario, int _projetos, double _horas);        
     int setProjetos(int _projetos);
     int getProjetos();
-
+    void print();
 };
 
 #endif

@@ -8,25 +8,34 @@ std::string Empregado::getNome(){
     return this->nome;
 }
 
-double Empregado::pagamentoMes(double horasTrabalhadas){
-    double bonus = 0;
-    if (horasTrabalhadas > 8){
-        double extra = horasTrabalhadas - 8;
-        bonus += extra/2;
-    }
-    return getSalario() * horasTrabalhadas + bonus;
+double Empregado::setHoras(double _horasTrabalhadas){
+    this->horasTrabalhadas = _horasTrabalhadas;
 }
 
-double Empregado::setSalario(double valor){
-    this->salarioHora = valor;
+double Empregado::getHoras(){
+    return this->horasTrabalhadas;
+}
+
+double Empregado::pagamentoMes(){
+    double bonus = 0;
+    double horas = getHoras();
+    if (horas > 8){
+        double extra = horas - 8;
+        bonus += extra/2;
+    }
+    return getSalario() * getHoras() + bonus;
+}
+
+double Empregado::setSalario(double _valor){
+    this->salarioHora = _valor;
 }
 
 double Empregado::getSalario(){
     return this->salarioHora;
 }
 
-double Empregado::setVendas(double vendas){
-    this->quotaMensalVendas = vendas;
+double Empregado::setVendas(double _vendas){
+    this->quotaMensalVendas = _vendas;
 }
 
 double Empregado::getVendas(){
