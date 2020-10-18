@@ -23,7 +23,7 @@ double Empregado::pagamentoMes(){
         double extra = horas - 8;
         bonus += extra/2;
     }
-    return getSalario() * getHoras() + bonus;
+    return getSalario() * horas + bonus;
 }
 
 double Empregado::setSalario(double _valor){
@@ -34,10 +34,3 @@ double Empregado::getSalario(){
     return this->salarioHora;
 }
 
-double Empregado::setVendas(double _vendas){
-    this->quotaMensalVendas = _vendas;
-}
-
-double Empregado::getVendas(){
-    return this->quotaMensalVendas;
-}

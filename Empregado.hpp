@@ -9,7 +9,6 @@ class Empregado {
   private:
     std::string nome;
     double salarioHora = 0;
-    double quotaMensalVendas = 0;
     double horasTrabalhadas = 0;
 
   public:
@@ -20,8 +19,6 @@ class Empregado {
     double pagamentoMes();
     double setSalario(double _valor);
     double getSalario();
-    double setVendas(double _vendas);
-    double getVendas();
 };
 
 #endif
